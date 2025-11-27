@@ -1,12 +1,30 @@
+import ExploreBtn from "@/components/ExploreBtn";
+import EventCard from "@/components/EventCard";
+import { events } from "@/lib/constants";
+
 const Home = () => {
     return (
         <section>
             <h1 className="text-center">
-                The Hub for Every Dev Event,<br />You Must not Miss Out!
+                The Hub for Every Dev Event,<br/>You Must not Miss Out!
             </h1>
             <p className="text-center mt-5">
                 Hackathons, Meetups, and Conferences are just a few of the events that are happening all over the world.
             </p>
+            <ExploreBtn/>
+
+            <div className="mt-20 space-y-7">
+                <h3>Featured Events</h3>
+
+                <ul className="events">
+                    { events.map ( ( event ) => (
+
+                        <EventCard key={ event.title } { ... event } />
+
+
+                    ) ) }
+                </ul>
+            </div>
         </section>
     )
 }
