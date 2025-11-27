@@ -11,7 +11,7 @@ const Home = () => {
             <p className="text-center mt-5">
                 Hackathons, Meetups, and Conferences are just a few of the events that are happening all over the world.
             </p>
-            <ExploreBtn/>
+            <ExploreBtn />
 
             <div className="mt-20 space-y-7">
                 <h3>Featured Events</h3>
